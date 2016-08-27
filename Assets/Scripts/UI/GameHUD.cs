@@ -19,29 +19,32 @@ namespace LD36.UI
 
         private void Start()
         {
-            GameManager.instance.OnScenarioUpdated += HandleScenarioUpdated;
+            GameManager.instance.OnGameStart += HandleGameStart;
             GameManager.instance.OnGameOver += HandleGameOver;
-
-            if (GameManager.instance.currentCure != null)
-            {
-                finishCureButton.onClick.AddListener(GameManager.instance.FinishCure);
-                heatButton.onClick.AddListener(GameManager.instance.currentCure.Heat);
-                stirButton.onClick.AddListener(GameManager.instance.currentCure.Stir);
-                crushButton.onClick.AddListener(GameManager.instance.currentCure.Crush);
-            }
+            GameManager.instance.OnScenarioUpdated += HandleScenarioUpdated;
         }
 
         private void HandleScenarioUpdated(Scenario scenario)
         {
+            Debug.Log("New scenario");
             string output = "A customer is complaining of some nasty symptoms: \n";
             output += string.Join(", ", scenario.symptoms.Select(x => x.name).ToArray()) + "\n";
             output += "Help them by finding a cure!";
-            scenarioText.text = output;
+            scenarioText.GetComponent<TypedText>().UpdateText(output);
+        }
+
+        private void HandleGameStart()
+        {
+            finishCureButton.onClick.AddListener(GameManager.instance.FinishCure);
+            heatButton.onClick.AddListener(GameManager.instance.HeatCure);
+            stirButton.onClick.AddListener(GameManager.instance.StirCure);
+            crushButton.onClick.AddListener(GameManager.instance.CrushCure);
         }
 
         private void HandleGameOver(float score)
         {
             gameOver.SetActive(true);
+            Debug.Log(score);
         }
     }
 }

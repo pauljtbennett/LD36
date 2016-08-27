@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace LD36
 {
+    public delegate void GameStartHandler();
     public delegate void GameOverHandler(float score);
     public delegate void TimeLeftUpdateHandler(float timeLeft, float percentageLeft);
     public delegate void ScenarioUpdateHandler(Scenario scenario);
@@ -12,6 +13,7 @@ namespace LD36
     {
         public static GameManager instance;
 
+        public event GameStartHandler OnGameStart;
         public event GameOverHandler OnGameOver;
         public event TimeLeftUpdateHandler OnTimeLeftUpdated;
         public event ScenarioUpdateHandler OnScenarioUpdated;
@@ -84,6 +86,22 @@ namespace LD36
             currentLevel = Levels.instance.GetConfig("Level 1");
             cures = new List<Cure>();
             timeLeft = currentLevel.time * 60f;
+            if (OnGameStart != null) OnGameStart();
+        }
+
+        public void HeatCure()
+        {
+            if (currentCure != null) currentCure.Heat();
+        }
+
+        public void StirCure()
+        {
+            if (currentCure != null) currentCure.Stir();
+        }
+
+        public void CrushCure()
+        {
+            if (currentCure != null) currentCure.Crush();
         }
 
         public void FinishCure()

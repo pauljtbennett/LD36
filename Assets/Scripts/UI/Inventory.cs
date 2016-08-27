@@ -44,7 +44,7 @@ namespace LD36.UI
             Debug.Log("Selected " + ingredient.name);
             if (GameManager.instance.currentCure != null)
             {
-                GameManager.instance.currentCure.ingredients.Add(ingredient);
+                GameManager.instance.currentCure.AddIngredient(ingredient);
             }
         }
     }

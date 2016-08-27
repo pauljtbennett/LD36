@@ -15,7 +15,7 @@ namespace LD36.UI
 
         private void HandleTimeLeftUpdated(float time, float percent)
         {
-            timeLeft.text = time.ToString();
+            timeLeft.text = Mathf.Ceil(time).ToString();
             bar.fillAmount = percent;
         }
     }

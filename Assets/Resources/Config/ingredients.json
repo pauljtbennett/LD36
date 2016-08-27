@@ -1,0 +1,145 @@
+{
+    "ingredients": [
+        {
+            "name": "Warty toad",
+            "order": -1,
+            "heat": 0,
+            "stir": 0,
+            "crush": 0
+        },
+        {
+            "name": "Snot rag",
+            "order": -1,
+            "heat": 0,
+            "stir": 0,
+            "crush": 0
+        },
+        {
+            "name": "Sucky leeches",
+            "order": -1,
+            "heat": 0,
+            "stir": 0,
+            "crush": 0
+        },
+        {
+            "name": "Human hair (mullet)",
+            "order": -1,
+            "heat": 0,
+            "stir": 0,
+            "crush": 0
+        },
+        {
+            "name": "Human hair (mohican)",
+            "order": -1,
+            "heat": 0,
+            "stir": 0,
+            "crush": 0
+        },
+        {
+            "name": "Fairy lights",
+            "icon": "fairy_lights",
+            "order": -1,
+            "heat": 0,
+            "stir": 0,
+            "crush": 0
+        },
+        {
+            "name": "Lizard poop",
+            "order": -1,
+            "heat": 0,
+            "stir": 0,
+            "crush": 0
+        },
+        {
+            "name": "Donkey poop",
+            "order": -1,
+            "heat": 0,
+            "stir": 0,
+            "crush": 0
+        },
+        {
+            "name": "Human sushi",
+            "order": -1,
+            "heat": 0,
+            "stir": 0,
+            "crush": 0
+        },
+        {
+            "name": "Cuddles off your mum",
+            "order": -1,
+            "heat": 0,
+            "stir": 0,
+            "crush": 0
+        },
+        {
+            "name": "Platypus blood",
+            "order": -1,
+            "heat": 0,
+            "stir": 0,
+            "crush": 0
+        },
+        {
+            "name": "Mouse paste",
+            "order": -1,
+            "heat": 0,
+            "stir": 0,
+            "crush": 0
+        },
+        {
+            "name": "Fat doob",
+            "order": -1,
+            "heat": 0,
+            "stir": 0,
+            "crush": 0
+        },
+        {
+            "name": "Armadillo testicle",
+            "order": -1,
+            "heat": 0,
+            "stir": 0,
+            "crush": 0
+        },
+        {
+            "name": "Syphilitic ants",
+            "order": -1,
+            "heat": 0,
+            "stir": 0,
+            "crush": 0
+        },
+        {
+            "name": "Santa hat",
+            "order": -1,
+            "heat": 0,
+            "stir": 0,
+            "crush": 0
+        },
+        {
+            "name": "Pug wrinkles",
+            "order": -1,
+            "heat": 0,
+            "stir": 0,
+            "crush": 0
+        },
+        {
+            "name": "Rotten llama",
+            "order": -1,
+            "heat": 0,
+            "stir": 0,
+            "crush": 0
+        },
+        {
+            "name": "Candied woodlice",
+            "order": -1,
+            "heat": 0,
+            "stir": 0,
+            "crush": 0
+        },
+        {
+            "name": "Baby pee",
+            "order": -1,
+            "heat": 0,
+            "stir": 0,
+            "crush": 0
+        }
+    ]
+}

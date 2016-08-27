@@ -1,0 +1,68 @@
+{
+    "symptoms": [
+        {
+            "name": "Duck noises",
+            "curedBy": [ "Fairy lights", "Human hair (mohican)" ]
+        },
+        {
+            "name": "Horns",
+            "curedBy": []
+        },
+        {
+            "name": "Lizard tail",
+            "curedBy": [ "Fat doob", "Rotten llama" ]
+        },
+        {
+            "name": "Terrible moustache",
+            "curedBy": [ "Mouse paste", "Warty toad" ]
+        },
+        {
+            "name": "Laser eyes",
+            "curedBy": [ "Syphilitic ants" ]
+        },
+        {
+            "name": "Short legs",
+            "curedBy": []
+        },
+        {
+            "name": "CONSTANT SHOUTING",
+            "curedBy": []
+        },
+        {
+            "name": "Chronic pooping",
+            "curedBy": []
+        },
+        {
+            "name": "Elongated tongue",
+            "curedBy": []
+        },
+        {
+            "name": "Firebreathing",
+            "curedBy": []
+        },
+        {
+            "name": "Botty burps",
+            "curedBy": []
+        },
+        {
+            "name": "Invisible hands",
+            "curedBy": []
+        },
+        {
+            "name": "Walking backwards",
+            "curedBy": []
+        },
+        {
+            "name": "Green hair",
+            "curedBy": []
+        },
+        {
+            "name": "Termite infestation",
+            "curedBy": []
+        },
+        {
+            "name": "On fire",
+            "curedBy": []
+        }
+    ]
+}

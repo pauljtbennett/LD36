@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using UnityEngine;
@@ -33,6 +34,7 @@ namespace LD36.Config
             {
                 Symptom s = new Symptom();
                 s.name = symptomObj["name"].ToString();
+                if (symptomObj["notes"] != null) s.notes = symptomObj["notes"].ToString();
                 s.curedBy = new List<Ingredient>();
                 foreach (var i in symptomObj["curedBy"].Children())
                 {
@@ -45,6 +47,11 @@ namespace LD36.Config
         public Symptom GetConfig(string name)
         {
             return symptoms[name];
+        }
+
+        public List<Symptom> GetAllConfigs()
+        {
+            return symptoms.Values.ToList();
         }
     }
 }

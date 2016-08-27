@@ -9,13 +9,31 @@ namespace LD36
         public List<Ingredient> ingredients;
 
         // Lists of indexes of actions
-        public List<int> heatedAt;
-        public List<int> stirredAt;
-        public List<int> crushedAt;
+        private List<int> heatedAt;
+        private List<int> stirredAt;
+        private List<int> crushedAt;
 
         public Cure(Scenario scenario)
         {
             this.scenario = scenario;
+        }
+
+        public void Heat()
+        {
+            if (ingredients.Count == 0) return;
+            heatedAt.Add(ingredients.Count - 1);
+        }
+
+        public void Stir()
+        {
+            if (ingredients.Count == 0) return;
+            stirredAt.Add(ingredients.Count - 1);
+        }
+
+        public void Crush()
+        {
+            if (ingredients.Count == 0) return;
+            crushedAt.Add(ingredients.Count - 1);
         }
 
         // Calculate an effectiveness score for a given scenarios

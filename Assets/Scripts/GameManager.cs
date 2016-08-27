@@ -5,7 +5,7 @@ using UnityEngine;
 namespace LD36
 {
     public delegate void GameOverHandler(float score);
-    public delegate void TimeLeftUpdateHandler(float timeLeft);
+    public delegate void TimeLeftUpdateHandler(float timeLeft, float percentageLeft);
     public delegate void ScenarioUpdateHandler(Scenario scenario);
 
     public class GameManager : MonoBehaviour
@@ -49,7 +49,8 @@ namespace LD36
             if (currentLevel != null)
             {
                 timeLeft -= Time.deltaTime;
-                if (OnTimeLeftUpdated != null) OnTimeLeftUpdated(timeLeft);
+                float percentageLeft = (timeLeft / (currentLevel.time * 60f));
+                if (OnTimeLeftUpdated != null) OnTimeLeftUpdated(timeLeft, percentageLeft);
 
                 if (timeLeft <= 0)
                 {
@@ -62,7 +63,7 @@ namespace LD36
                         totalScore += cure.CalculateEffectiveness();
                     }
 
-                    Debug.Log("Total score: " + totalScore);
+                    currentLevel = null;
                     if (OnGameOver != null) OnGameOver(totalScore);
                     return;
                 }
@@ -74,7 +75,6 @@ namespace LD36
                     currentCure = new Cure(currentScenario);
                     cures.Add(currentCure);
                     if (OnScenarioUpdated != null) OnScenarioUpdated(currentScenario);
-                    Debug.Log("Got a new scenario");
                 }
             }
         }

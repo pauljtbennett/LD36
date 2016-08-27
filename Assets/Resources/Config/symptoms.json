@@ -2,14 +2,17 @@
     "symptoms": [
         {
             "name": "Duck noises",
+            "notes": "Quack quack! Treated by tangling a string of fairy lights with the human hair of a punk.",
             "curedBy": [ "Fairy lights", "Human hair (mohican)" ]
         },
         {
             "name": "Horns",
+            "notes": "Pointy things emanating from the skull. Highly dangerous.",
             "curedBy": []
         },
         {
             "name": "Lizard tail",
+            "notes": "",
             "curedBy": [ "Fat doob", "Rotten llama" ]
         },
         {

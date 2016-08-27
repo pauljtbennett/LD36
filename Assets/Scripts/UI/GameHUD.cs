@@ -1,3 +1,4 @@
+using System.Linq;
 using LD36.Config;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,19 +14,34 @@ namespace LD36.UI
 
         public GameObject scenario;
         public Text scenarioText;
+        public GameObject gameOver;
+        public Text gameOverText;
 
         private void Start()
         {
-            finishCureButton.onClick.AddListener(GameManager.instance.FinishCure);
             GameManager.instance.OnScenarioUpdated += HandleScenarioUpdated;
+            GameManager.instance.OnGameOver += HandleGameOver;
+
+            if (GameManager.instance.currentCure != null)
+            {
+                finishCureButton.onClick.AddListener(GameManager.instance.FinishCure);
+                heatButton.onClick.AddListener(GameManager.instance.currentCure.Heat);
+                stirButton.onClick.AddListener(GameManager.instance.currentCure.Stir);
+                crushButton.onClick.AddListener(GameManager.instance.currentCure.Crush);
+            }
         }
 
         private void HandleScenarioUpdated(Scenario scenario)
         {
-            foreach (var symptom in scenario.symptoms)
-            {
-                Debug.Log(symptom.name);
-            }
+            string output = "A customer is complaining of some nasty symptoms: \n";
+            output += string.Join(", ", scenario.symptoms.Select(x => x.name).ToArray()) + "\n";
+            output += "Help them by finding a cure!";
+            scenarioText.text = output;
+        }
+
+        private void HandleGameOver(float score)
+        {
+            gameOver.SetActive(true);
         }
     }
 }

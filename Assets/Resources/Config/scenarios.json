@@ -1,7 +1,7 @@
 {
     "scenarios": [
         {
-            "symptoms": []
+            "symptoms": [ "Duck noises", "Lizard tail", "Terrible moustache", "Laser eyes" ]
         }
     ]
 }

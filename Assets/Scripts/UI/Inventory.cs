@@ -50,11 +50,7 @@ namespace LD36.UI
 
         public void IngredientSelected(Ingredient ingredient)
         {
-            Debug.Log("Selected " + ingredient.name);
-            if (GameManager.instance.currentCure != null)
-            {
-                GameManager.instance.currentCure.AddIngredient(ingredient);
-            }
+            GameManager.instance.AddIngredientToCure(ingredient);
         }
     }
 }

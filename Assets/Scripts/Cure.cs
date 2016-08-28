@@ -18,7 +18,11 @@ namespace LD36
         public Cure(Scenario scenario)
         {
             this.scenario = scenario;
-            this.ingredients = new List<Ingredient>();
+            
+            ingredients = new List<Ingredient>();
+            heatedAt = new List<int>();
+            stirredAt = new List<int>();
+            crushedAt = new List<int>();
         }
 
         public void AddIngredient(Ingredient ingredient)

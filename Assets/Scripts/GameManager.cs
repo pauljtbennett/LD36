@@ -8,6 +8,8 @@ namespace LD36
     public delegate void GameOverHandler(float score);
     public delegate void TimeLeftUpdateHandler(float timeLeft, float percentageLeft);
     public delegate void ScenarioUpdateHandler(Scenario scenario);
+    public delegate void CureIngredientAddedHandler(Ingredient ingredient);
+    public delegate void CureUpdatedHandler();
 
     public class GameManager : MonoBehaviour
     {
@@ -17,6 +19,10 @@ namespace LD36
         public event GameOverHandler OnGameOver;
         public event TimeLeftUpdateHandler OnTimeLeftUpdated;
         public event ScenarioUpdateHandler OnScenarioUpdated;
+        public event CureIngredientAddedHandler OnCureIngredientAdded;
+        public event CureUpdatedHandler OnCureHeated;
+        public event CureUpdatedHandler OnCureStirred;
+        public event CureUpdatedHandler OnCureCrushed;
 
         
         private float timeLeft;
@@ -89,19 +95,41 @@ namespace LD36
             if (OnGameStart != null) OnGameStart();
         }
 
+        public void AddIngredientToCure(Ingredient ingredient)
+        {
+            if (currentCure != null) 
+            {
+                currentCure.AddIngredient(ingredient);
+                if (OnCureIngredientAdded != null) OnCureIngredientAdded(ingredient);
+            }
+
+        }
+
         public void HeatCure()
         {
-            if (currentCure != null) currentCure.Heat();
+            if (currentCure != null)
+            {
+                currentCure.Heat();
+                if (OnCureHeated != null) OnCureHeated();
+            }
         }
 
         public void StirCure()
         {
-            if (currentCure != null) currentCure.Stir();
+            if (currentCure != null)
+            {
+                currentCure.Stir();
+                if (OnCureStirred != null) OnCureStirred();
+            }
         }
 
         public void CrushCure()
         {
-            if (currentCure != null) currentCure.Crush();
+            if (currentCure != null)
+            {
+                currentCure.Crush();
+                if (OnCureCrushed != null) OnCureCrushed();
+            }
         }
 
         public void FinishCure()

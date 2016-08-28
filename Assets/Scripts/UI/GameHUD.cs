@@ -26,7 +26,6 @@ namespace LD36.UI
 
         private void HandleScenarioUpdated(Scenario scenario)
         {
-            Debug.Log("New scenario");
             string output = "A customer is complaining of some nasty symptoms: \n";
             output += string.Join(", ", scenario.symptoms.Select(x => x.name).ToArray()) + "\n";
             output += "Help them by finding a cure!";

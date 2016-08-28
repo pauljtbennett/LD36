@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace LD36.Config
 {
     public class Ingredient
@@ -8,6 +10,7 @@ namespace LD36.Config
         public int heat;
         public int stir;
         public int crush;
+        public List<string> neverMix;
 
         public Ingredient()
         {

@@ -40,9 +40,15 @@ namespace LD36.UI
 
                 // Setup tooltip spawner
                 string tooltipContent = iCopy.name + "\n";
-                if (iCopy.heat != 0) tooltipContent += string.Format("Should be heated: {0}", iCopy.heat == -1 ? "Never" : "Always");
-                if (iCopy.stir != 0) tooltipContent += string.Format("Should be stirred: {0}", iCopy.stir == -1 ? "Never" : "Always");
-                if (iCopy.crush != 0) tooltipContent += string.Format("Should be crushed: {0}", iCopy.crush == -1 ? "Never" : "Always");
+                if (iCopy.heat != 0) tooltipContent += string.Format("<color=yellow>{0} heat</color>\n", iCopy.heat == -1 ? "Never" : "Always");
+                if (iCopy.stir != 0) tooltipContent += string.Format("<color=yellow>{0} stir</color>\n", iCopy.stir == -1 ? "Never" : "Always");
+                if (iCopy.crush != 0) tooltipContent += string.Format("<color=yellow>{0} crush</color>\n", iCopy.crush == -1 ? "Never" : "Always");
+                if (iCopy.neverMix != null)
+                {
+                    tooltipContent += "<color=red>Never mix with: ";
+                    tooltipContent += string.Join(", ", iCopy.neverMix.ToArray());
+                    tooltipContent += "</color>";
+                }
                 TooltipSpawner spawner = go.GetComponent<TooltipSpawner>();
                 spawner.SetContent(tooltipContent);
             }

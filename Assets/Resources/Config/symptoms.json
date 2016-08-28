@@ -12,15 +12,17 @@
         },
         {
             "name": "Lizard tail",
-            "notes": "",
+            "notes": "Upsets patient's sense of balance. Treat with llama flesh, or administer a fat doob.",
             "curedBy": [ "Fat doob", "Rotten llama" ]
         },
         {
             "name": "Terrible moustache",
+            "notes": "When no razor is available, use a rodent paste or the juice of one toad.",
             "curedBy": [ "Mouse paste", "Warty toad" ]
         },
         {
             "name": "Laser eyes",
+            "notes": "Will burn through solid steel. Apply syphilitic ants to eyes immediately.",
             "curedBy": [ "Syphilitic ants" ]
         },
         {
@@ -29,7 +31,7 @@
         },
         {
             "name": "CONSTANT SHOUTING",
-            "curedBy": []
+            "curedBy": [ "Fat doob", "Santa hat", "Rotten llama" ]
         },
         {
             "name": "Chronic pooping",
@@ -41,11 +43,11 @@
         },
         {
             "name": "Firebreathing",
-            "curedBy": []
+            "curedBy": [ "Snot rag", "Armadillo testicle", "Warty toad" ]
         },
         {
             "name": "Botty burps",
-            "curedBy": []
+            "curedBy": [ "Human hair (mullet)", "Lizard poop" ]
         },
         {
             "name": "Invisible hands",
@@ -57,7 +59,7 @@
         },
         {
             "name": "Green hair",
-            "curedBy": []
+            "curedBy": [ "Fat doob", "Platypus blood", "Mouse paste" ]
         },
         {
             "name": "Termite infestation",

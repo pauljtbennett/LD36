@@ -2,6 +2,12 @@
     "scenarios": [
         {
             "symptoms": [ "Duck noises", "Lizard tail", "Terrible moustache", "Laser eyes" ]
+        },
+        {
+            "symptoms": [ "Green hair", "Chronic pooping", "Firebreathing" ]
+        },
+        {
+            "symptoms": [ "Botty burps", "CONSTANT SHOUTING", "Terrible moustache" ]
         }
     ]
 }

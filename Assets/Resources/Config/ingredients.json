@@ -2,7 +2,7 @@
     "ingredients": [
         {
             "name": "Warty toad",
-            "order": -1,
+            "order": 0,
             "heat": 0,
             "stir": 0,
             "crush": 0
@@ -11,11 +11,12 @@
             "name": "Snot rag",
             "order": -1,
             "heat": 0,
-            "stir": 0,
+            "stir": -1,
             "crush": 0
         },
         {
             "name": "Sucky leeches",
+            "icon": "sucky_leeches",
             "order": -1,
             "heat": 0,
             "stir": 0,
@@ -26,19 +27,20 @@
             "order": -1,
             "heat": 0,
             "stir": 0,
-            "crush": 0
+            "crush": 0,
+            "neverMix": [ "Fat doob" ]
         },
         {
             "name": "Human hair (mohican)",
             "order": -1,
             "heat": 0,
             "stir": 0,
-            "crush": 0
+            "crush": -1
         },
         {
             "name": "Fairy lights",
             "icon": "fairy_lights",
-            "order": -1,
+            "order": 1,
             "heat": 0,
             "stir": 0,
             "crush": 0
@@ -57,7 +59,7 @@
             "order": -1,
             "heat": 0,
             "stir": 0,
-            "crush": 0
+            "crush": 1
         },
         {
             "name": "Human sushi",
@@ -75,6 +77,7 @@
         },
         {
             "name": "Platypus blood",
+            "icon": "platypus_blood",
             "order": -1,
             "heat": 0,
             "stir": 0,
@@ -83,7 +86,7 @@
         {
             "name": "Mouse paste",
             "order": -1,
-            "heat": 0,
+            "heat": 1,
             "stir": 0,
             "crush": 0
         },
@@ -92,14 +95,15 @@
             "order": -1,
             "heat": 0,
             "stir": 0,
-            "crush": 0
+            "crush": 0,
+            "neverMix": [ "Human hair (mullet)", "Syphilitic ants" ]
         },
         {
             "name": "Armadillo testicle",
             "icon": "armadillo_testicle",
             "order": -1,
             "heat": 0,
-            "stir": 0,
+            "stir": 1,
             "crush": 0
         },
         {
@@ -107,10 +111,12 @@
             "order": -1,
             "heat": 0,
             "stir": 0,
-            "crush": 0
+            "crush": 0,
+            "neverMix": [ "Fat doob" ]
         },
         {
             "name": "Santa hat",
+            "icon": "santa_hat",
             "order": -1,
             "heat": 0,
             "stir": 0,
@@ -118,6 +124,7 @@
         },
         {
             "name": "Pug wrinkles",
+            "icon": "pug_wrinkles",
             "order": -1,
             "heat": 0,
             "stir": 0,
@@ -126,23 +133,27 @@
         {
             "name": "Rotten llama",
             "order": -1,
-            "heat": 0,
+            "heat": -1,
             "stir": 0,
             "crush": 0
         },
         {
             "name": "Candied woodlice",
+            "icon": "candied_woodlice",
             "order": -1,
             "heat": 0,
             "stir": 0,
-            "crush": 0
+            "crush": 0,
+            "neverMix": [ "Baby pee" ]
         },
         {
             "name": "Baby pee",
+            "icon": "baby_pee",
             "order": -1,
             "heat": 0,
             "stir": 0,
-            "crush": 0
+            "crush": 0,
+            "neverMix": [ "Candied woodlice" ]
         }
     ]
 }

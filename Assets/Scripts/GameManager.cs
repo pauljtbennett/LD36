@@ -5,7 +5,7 @@ using UnityEngine;
 namespace LD36
 {
     public delegate void GameStartHandler();
-    public delegate void GameOverHandler(float score);
+    public delegate void GameOverHandler(float score, int deaths);
     public delegate void TimeLeftUpdateHandler(float timeLeft, float percentageLeft);
     public delegate void ScenarioUpdateHandler(Scenario scenario);
     public delegate void CureIngredientAddedHandler(Ingredient ingredient);
@@ -64,15 +64,31 @@ namespace LD36
                 {
                     gameOver = true;
                     float totalScore = 0f;
+                    int deaths = 0;
 
                     // Do some scoring
                     foreach (var cure in cures)
                     {
-                        totalScore += cure.CalculateEffectiveness();
+                        float score = cure.CalculateEffectiveness();
+                        if (score == float.NegativeInfinity)
+                        {
+                            deaths++;
+                            totalScore -= 500f; // Lets just say you lose 500 points for killing someone, seems fair
+                        }
+                        else
+                        {
+                            totalScore += score;
+                        }
+                    }
+
+                    int highScore = PlayerPrefs.GetInt("highScore", 0);
+                    if (Mathf.RoundToInt(totalScore) > highScore)
+                    {
+                        PlayerPrefs.SetInt("highScore", Mathf.RoundToInt(totalScore));
                     }
 
                     currentLevel = null;
-                    if (OnGameOver != null) OnGameOver(totalScore);
+                    if (OnGameOver != null) OnGameOver(totalScore, deaths);
                     return;
                 }
 

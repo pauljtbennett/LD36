@@ -14,8 +14,7 @@ namespace LD36.UI
 
         public GameObject scenario;
         public Text scenarioText;
-        public GameObject gameOver;
-        public Text gameOverText;
+        public GameOver gameOver;
 
         private void Start()
         {
@@ -40,9 +39,10 @@ namespace LD36.UI
             crushButton.onClick.AddListener(GameManager.instance.CrushCure);
         }
 
-        private void HandleGameOver(float score)
+        private void HandleGameOver(float score, int deaths)
         {
-            gameOver.SetActive(true);
+            gameOver.gameObject.SetActive(true);
+            gameOver.UpdateScore(Mathf.RoundToInt(score), deaths);
             Debug.Log(score);
         }
     }

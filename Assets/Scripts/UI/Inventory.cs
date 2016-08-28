@@ -40,6 +40,15 @@ namespace LD36.UI
 
                 // Setup tooltip spawner
                 string tooltipContent = iCopy.name + "\n";
+                if (iCopy.order > -1)
+                {
+                    string order = "1st";
+                    if (iCopy.order == 1) order = "2nd";
+                    if (iCopy.order == 2) order = "3rd";
+                    if (iCopy.order == 3) order = "4th";
+                    if (iCopy.order == 4) order = "5th"; 
+                    tooltipContent += string.Format("Must be added {0}\n", order);
+                }
                 if (iCopy.heat != 0) tooltipContent += string.Format("<color=yellow>{0} heat</color>\n", iCopy.heat == -1 ? "Never" : "Always");
                 if (iCopy.stir != 0) tooltipContent += string.Format("<color=yellow>{0} stir</color>\n", iCopy.stir == -1 ? "Never" : "Always");
                 if (iCopy.crush != 0) tooltipContent += string.Format("<color=yellow>{0} crush</color>\n", iCopy.crush == -1 ? "Never" : "Always");

@@ -7,7 +7,7 @@
         },
         {
             "name": "Horns",
-            "notes": "Pointy things emanating from the skull. Highly dangerous.",
+            "notes": "Pointy things emanating from the skull. Highly dangerous. Rub on baby pee to cure.",
             "curedBy": [ "Baby pee" ]
         },
         {
@@ -32,12 +32,13 @@
         },
         {
             "name": "CONSTANT SHOUTING",
-            "notes": "",
+            "notes": "Shut the patient up by placing a Santa hat on their head. Also had luck with a fat doob and llama meat.",
             "curedBy": [ "Fat doob", "Santa hat", "Rotten llama" ]
         },
         {
             "name": "Chronic pooping",
-            "curedBy": []
+            "notes": "Cure patient ASAP by applying mullet hair to the affected area.",
+            "curedBy": [ "Human hair (mullet)" ]
         },
         {
             "name": "Elongated tongue",
@@ -51,26 +52,32 @@
         },
         {
             "name": "Botty burps",
+            "notes": "Parp! Either human mullet hair or lizard poop should do the trick here.",
             "curedBy": [ "Human hair (mullet)", "Lizard poop" ]
         },
         {
             "name": "Invisible hands",
-            "curedBy": []
+            "notes": "Place leeches on the forearms to stimulate reappearance and extremities.",
+            "curedBy": [ "Sucky leeches", "Human sushi" ]
         },
         {
             "name": "Walking backwards",
+            "notes": "No cure found.",
             "curedBy": []
         },
         {
             "name": "Green hair",
+            "notes": "Common in patients exposed to nuclear waste. Cure by applying Platypus blood or Mouse paste under the tongue.",
             "curedBy": [ "Fat doob", "Platypus blood", "Mouse paste" ]
         },
         {
             "name": "Termite infestation",
-            "curedBy": []
+            "notes": "Syphilitic ants or other insects should see these nasty critters off.",
+            "curedBy": [ "Syphilitic ants", "Candied woodlice" ]
         },
         {
             "name": "On fire",
+            "notes": "Get a fire extinguisher I guess...",
             "curedBy": []
         }
     ]

@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using LD36.Config;
 using UnityEngine;
@@ -10,6 +11,7 @@ namespace LD36
     public delegate void ScenarioUpdateHandler(Scenario scenario);
     public delegate void CureIngredientAddedHandler(Ingredient ingredient);
     public delegate void CureUpdatedHandler();
+    public delegate void CureFinishedHandler(Cure cure);
 
     public class GameManager : MonoBehaviour
     {
@@ -23,6 +25,7 @@ namespace LD36
         public event CureUpdatedHandler OnCureHeated;
         public event CureUpdatedHandler OnCureStirred;
         public event CureUpdatedHandler OnCureCrushed;
+        public event CureFinishedHandler OnCureFinished;
 
         public GameObject introBook;
         public GameObject gameHUD;
@@ -49,7 +52,10 @@ namespace LD36
             Symptoms.instance.Init("symptoms");
             Scenarios.instance.Init("scenarios");
             Levels.instance.Init("levels");
+        }
 
+        private void Start()
+        {
             introBook.SetActive(true);
             gameHUD.SetActive(false);
         }
@@ -155,7 +161,16 @@ namespace LD36
 
         public void FinishCure()
         {
+            if (OnCureFinished != null) OnCureFinished(currentCure);
+
+            // Reset cure but leave scenario active for a few seconds
             currentCure = null;
+            StartCoroutine(DelayedNewScenario(6f));
+        }
+
+        private IEnumerator DelayedNewScenario(float delay)
+        {
+            yield return new WaitForSeconds(delay);
             currentScenario = null;
         }
     }

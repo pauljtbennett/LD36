@@ -15,7 +15,9 @@ namespace LD36.UI
 
         private void HandleTimeLeftUpdated(float time, float percent)
         {
-            timeLeft.text = Mathf.Ceil(time).ToString();
+            float secondsLeft = Mathf.Ceil(time);
+            int minutesLeft = Mathf.FloorToInt(secondsLeft / 60f); 
+            timeLeft.text = string.Format("{0}:{1:00}", minutesLeft, secondsLeft - (minutesLeft * 60));
             bar.fillAmount = percent;
         }
     }

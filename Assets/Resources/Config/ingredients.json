@@ -26,6 +26,7 @@
         },
         {
             "name": "Human hair (mullet)",
+            "icon": "hair_mullet",
             "order": -1,
             "heat": 0,
             "stir": 0,

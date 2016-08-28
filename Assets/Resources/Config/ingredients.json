@@ -45,6 +45,7 @@
         },
         {
             "name": "Lizard poop",
+            "icon": "lizard_poop",
             "order": -1,
             "heat": 0,
             "stir": 0,
@@ -52,6 +53,7 @@
         },
         {
             "name": "Donkey poop",
+            "icon": "donkey_poop",
             "order": -1,
             "heat": 0,
             "stir": 0,
@@ -94,6 +96,7 @@
         },
         {
             "name": "Armadillo testicle",
+            "icon": "armadillo_testicle",
             "order": -1,
             "heat": 0,
             "stir": 0,

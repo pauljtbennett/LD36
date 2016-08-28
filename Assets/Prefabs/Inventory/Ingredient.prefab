@@ -40,6 +40,7 @@ GameObject:
   - 114: {fileID: 114000011797881106}
   - 114: {fileID: 114000010043794812}
   - 114: {fileID: 114000014113214690}
+  - 114: {fileID: 114000011488300574}
   m_Layer: 5
   m_Name: Ingredient
   m_TagString: Untagged
@@ -115,6 +116,17 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114000011488300574
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013871685024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b57fcc105eb46f7a600d3044222fe8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000011797881106
 MonoBehaviour:
   m_ObjectHideFlags: 1

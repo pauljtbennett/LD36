@@ -1,5 +1,6 @@
 using System.IO;
 using LD36.Config;
+using LD36.UI.Tooltip;
 using LD36.Utils;
 using UnityEngine;
 using UnityEngine.UI;
@@ -36,6 +37,14 @@ namespace LD36.UI
                         icon.sprite = s;
                     }
                 }
+
+                // Setup tooltip spawner
+                string tooltipContent = iCopy.name + "\n";
+                if (iCopy.heat != 0) tooltipContent += string.Format("Should be heated: {0}", iCopy.heat == -1 ? "Never" : "Always");
+                if (iCopy.stir != 0) tooltipContent += string.Format("Should be stirred: {0}", iCopy.stir == -1 ? "Never" : "Always");
+                if (iCopy.crush != 0) tooltipContent += string.Format("Should be crushed: {0}", iCopy.crush == -1 ? "Never" : "Always");
+                TooltipSpawner spawner = go.GetComponent<TooltipSpawner>();
+                spawner.SetContent(tooltipContent);
             }
         }
 

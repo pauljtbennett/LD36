@@ -24,6 +24,10 @@ namespace LD36
         public event CureUpdatedHandler OnCureStirred;
         public event CureUpdatedHandler OnCureCrushed;
 
+        public GameObject introBook;
+        public GameObject gameHUD;
+        public Animator environmentAnimator;
+
         
         private float timeLeft;
         private bool gameOver;
@@ -45,11 +49,9 @@ namespace LD36
             Symptoms.instance.Init("symptoms");
             Scenarios.instance.Init("scenarios");
             Levels.instance.Init("levels");
-        }
 
-        private void Start()
-        {
-            StartGame();
+            introBook.SetActive(true);
+            gameHUD.SetActive(false);
         }
 
         private void Update()
@@ -108,6 +110,9 @@ namespace LD36
             currentLevel = Levels.instance.GetConfig("Level 1");
             cures = new List<Cure>();
             timeLeft = currentLevel.time * 60f;
+            introBook.SetActive(false);
+            gameHUD.SetActive(true);
+            environmentAnimator.SetTrigger("MoveToGame");
             if (OnGameStart != null) OnGameStart();
         }
 

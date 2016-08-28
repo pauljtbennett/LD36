@@ -8,7 +8,7 @@
         {
             "name": "Horns",
             "notes": "Pointy things emanating from the skull. Highly dangerous.",
-            "curedBy": []
+            "curedBy": [ "Baby pee" ]
         },
         {
             "name": "Lizard tail",
@@ -27,10 +27,12 @@
         },
         {
             "name": "Short legs",
-            "curedBy": []
+            "notes": "Easily cured by insects in any form.",
+            "curedBy": [ "Candied woodlice", "Syphilitic ants" ]
         },
         {
             "name": "CONSTANT SHOUTING",
+            "notes": "",
             "curedBy": [ "Fat doob", "Santa hat", "Rotten llama" ]
         },
         {
@@ -39,10 +41,12 @@
         },
         {
             "name": "Elongated tongue",
-            "curedBy": []
+            "notes": "A short burst of pug wrinkles has proven to retract the tongue.",
+            "curedBy": [ "Pug wrinkles" ]
         },
         {
             "name": "Firebreathing",
+            "notes": "Can occur after eating very spicy food. Apply rag over mouth to cure - also treated by toad or armadillo testicles.",
             "curedBy": [ "Snot rag", "Armadillo testicle", "Warty toad" ]
         },
         {

@@ -47,16 +47,28 @@ namespace LD36.UI.Recipe
         public void AddHeat()
         {
             GameObject go = content.AddChild(stepPrefab);
+            RecipeStep step = go.GetComponent<RecipeStep>();
+            step.icon.sprite = Resources.Load<Sprite>("Icons/fire");
+            TooltipSpawner spawner = go.GetComponent<TooltipSpawner>();
+            spawner.SetContent("Heat");
         }
 
         public void AddStir()
         {
             GameObject go = content.AddChild(stepPrefab);
+            RecipeStep step = go.GetComponent<RecipeStep>();
+            step.icon.sprite = Resources.Load<Sprite>("Icons/stir");
+            TooltipSpawner spawner = go.GetComponent<TooltipSpawner>();
+            spawner.SetContent("Stir");
         }
 
         public void AddCrush()
         {
             GameObject go = content.AddChild(stepPrefab);
+            RecipeStep step = go.GetComponent<RecipeStep>();
+            step.icon.sprite = Resources.Load<Sprite>("Icons/crush");
+            TooltipSpawner spawner = go.GetComponent<TooltipSpawner>();
+            spawner.SetContent("Crush");
         }
 
         public void Clear()

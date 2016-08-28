@@ -39,6 +39,9 @@ namespace LD36
         public Scenario currentScenario { get; private set; }
         public Cure currentCure { get; private set; }
 
+        // Keep track of this to avoid getting the same one again
+        private Scenario lastScenario;
+
         private void Awake()
         {
             if (instance == null)
@@ -103,6 +106,7 @@ namespace LD36
                 if (currentScenario == null)
                 {
                     List<Scenario> possibleScenarios = Scenarios.instance.GetAllConfigs();
+                    possibleScenarios.Remove(lastScenario);
                     currentScenario = possibleScenarios[Random.Range(0, possibleScenarios.Count)];
                     currentCure = new Cure(currentScenario);
                     cures.Add(currentCure);
@@ -126,8 +130,10 @@ namespace LD36
         {
             if (currentCure != null) 
             {
-                currentCure.AddIngredient(ingredient);
-                if (OnCureIngredientAdded != null) OnCureIngredientAdded(ingredient);
+                if (currentCure.AddIngredient(ingredient))
+                {
+                    if (OnCureIngredientAdded != null) OnCureIngredientAdded(ingredient);
+                }
             }
 
         }
@@ -171,6 +177,7 @@ namespace LD36
         private IEnumerator DelayedNewScenario(float delay)
         {
             yield return new WaitForSeconds(delay);
+            lastScenario = currentScenario;
             currentScenario = null;
         }
     }

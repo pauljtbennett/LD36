@@ -10,7 +10,6 @@ namespace LD36
         public Scenario scenario { get; private set; }
         public List<Ingredient> ingredients { get; private set; }
 
-        // Lists of indexes of actions
         private List<Ingredient> heated;
         private List<Ingredient> stirred;
         private List<Ingredient> crushed;
@@ -25,9 +24,14 @@ namespace LD36
             crushed = new List<Ingredient>();
         }
 
-        public void AddIngredient(Ingredient ingredient)
+        public bool AddIngredient(Ingredient ingredient)
         {
-            if (!ingredients.Contains(ingredient)) ingredients.Add(ingredient);
+            if (!ingredients.Contains(ingredient))
+            {
+                ingredients.Add(ingredient);
+                return true;
+            }
+            return false;
         }
 
         public void Heat()
@@ -107,7 +111,7 @@ namespace LD36
             // Check heated
             foreach (var h in heated)
             {
-                total += (50 * h.heat); 
+                total += (50 * h.heat);
             }
 
             // Check stirred

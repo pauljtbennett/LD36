@@ -31,7 +31,7 @@ namespace LD36.Config
             var levelsObj = JToken.Parse(t.text);
             foreach (var levelObj in levelsObj["levels"].Children())
             {
-                Level l = JsonConvert.DeserializeObject<Level>(levelObj.ToString());
+                Level l = new Level(levelObj);
                 levels.Add(l.name, l);
             }
         }

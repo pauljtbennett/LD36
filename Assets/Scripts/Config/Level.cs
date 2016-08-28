@@ -1,3 +1,5 @@
+using Newtonsoft.Json.Linq;
+
 namespace LD36.Config
 {
     public class Level
@@ -8,6 +10,12 @@ namespace LD36.Config
         public Level()
         {
             
+        }
+
+        public Level(JToken token)
+        {
+            name = token.Value<string>("name");
+            time = token.Value<float>("time");
         }
     }
 }

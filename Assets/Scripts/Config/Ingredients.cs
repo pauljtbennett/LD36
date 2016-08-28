@@ -32,7 +32,7 @@ namespace LD36.Config
             var ingredientsObj = JToken.Parse(t.text);
             foreach (var ingredientObj in ingredientsObj["ingredients"].Children())
             {
-                Ingredient i = JsonConvert.DeserializeObject<Ingredient>(ingredientObj.ToString());
+                Ingredient i = new Ingredient(ingredientObj);
                 ingredients.Add(i.name, i);
             }
         }

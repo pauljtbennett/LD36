@@ -31,12 +31,7 @@ namespace LD36.Config
             var scenariosObj = JToken.Parse(t.text);
             foreach (var scenarioObj in scenariosObj["scenarios"].Children())
             {
-                Scenario s = new Scenario();
-                s.symptoms = new List<Symptom>();
-                foreach (var i in scenarioObj["symptoms"].Children())
-                {
-                    s.symptoms.Add(Symptoms.instance.GetConfig(i.ToString()));
-                }
+                Scenario s = new Scenario(scenarioObj);
                 scenarios.Add(s);
             }
         }

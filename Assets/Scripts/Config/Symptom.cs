@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Newtonsoft.Json.Linq;
 
 namespace LD36.Config
 {
@@ -11,6 +12,18 @@ namespace LD36.Config
         public Symptom()
         {
             
+        }
+
+        public Symptom(JToken token)
+        {
+            name = token.Value<string>("name");
+            notes = token.Value<string>("notes");
+            curedBy = new List<Ingredient>();
+
+            foreach (var i in token["curedBy"].Children())
+            {
+                curedBy.Add(Ingredients.instance.GetConfig(i.ToString()));
+            }
         }
     }
 }

@@ -32,14 +32,7 @@ namespace LD36.Config
             var symptomsObj = JToken.Parse(t.text);
             foreach (var symptomObj in symptomsObj["symptoms"].Children())
             {
-                Symptom s = new Symptom();
-                s.name = symptomObj["name"].ToString();
-                if (symptomObj["notes"] != null) s.notes = symptomObj["notes"].ToString();
-                s.curedBy = new List<Ingredient>();
-                foreach (var i in symptomObj["curedBy"].Children())
-                {
-                    s.curedBy.Add(Ingredients.instance.GetConfig(i.ToString()));
-                }
+                Symptom s = new Symptom(symptomObj);
                 symptoms.Add(s.name, s);
             }
         }

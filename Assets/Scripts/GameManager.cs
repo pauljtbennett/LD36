@@ -106,8 +106,18 @@ namespace LD36
                 if (currentScenario == null)
                 {
                     List<Scenario> possibleScenarios = Scenarios.instance.GetAllConfigs();
-                    possibleScenarios.Remove(lastScenario);
-                    currentScenario = possibleScenarios[Random.Range(0, possibleScenarios.Count)];
+
+                    // First time round gets an easy one
+                    if (lastScenario == null)
+                    {
+                        currentScenario = possibleScenarios[0];
+                    }
+                    else 
+                    {
+                        possibleScenarios.Remove(lastScenario);
+                        currentScenario = possibleScenarios[Random.Range(0, possibleScenarios.Count)];
+                    }
+                    
                     currentCure = new Cure(currentScenario);
                     cures.Add(currentCure);
                     if (OnScenarioUpdated != null) OnScenarioUpdated(currentScenario);

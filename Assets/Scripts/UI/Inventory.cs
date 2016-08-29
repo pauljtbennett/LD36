@@ -49,14 +49,14 @@ namespace LD36.UI
                     if (iCopy.order == 4) order = "5th"; 
                     tooltipContent += string.Format("Must be added {0}\n", order);
                 }
-                if (iCopy.heat != 0) tooltipContent += string.Format("<color=yellow>{0} heat</color>\n", iCopy.heat == -1 ? "Never" : "Always");
-                if (iCopy.stir != 0) tooltipContent += string.Format("<color=yellow>{0} stir</color>\n", iCopy.stir == -1 ? "Never" : "Always");
-                if (iCopy.crush != 0) tooltipContent += string.Format("<color=yellow>{0} crush</color>\n", iCopy.crush == -1 ? "Never" : "Always");
+                if (iCopy.heat != 0) tooltipContent += string.Format("<color=yellow>Heating will {0} your score</color>\n", iCopy.heat == -1 ? "reduce" : "increase");
+                if (iCopy.stir != 0) tooltipContent += string.Format("<color=yellow>Stirring will {0} your score</color>\n", iCopy.stir == -1 ? "reduce" : "increase");
+                if (iCopy.crush != 0) tooltipContent += string.Format("<color=yellow>Crushing will {0} your score</color>\n", iCopy.crush == -1 ? "reduce" : "increase");
                 if (iCopy.neverMix != null)
                 {
-                    tooltipContent += "<color=red>Never mix with: ";
+                    tooltipContent += "<color=red>Mixing with ";
                     tooltipContent += string.Join(", ", iCopy.neverMix.ToArray());
-                    tooltipContent += "</color>";
+                    tooltipContent += " will kill your patient!</color>";
                 }
                 TooltipSpawner spawner = go.GetComponent<TooltipSpawner>();
                 spawner.SetContent(tooltipContent);

@@ -1,6 +1,9 @@
 {
     "scenarios": [
         {
+            "symptoms": [ "Horns", "Short legs" ]
+        },
+        {
             "symptoms": [ "Duck noises", "Lizard tail", "Terrible moustache", "Laser eyes" ]
         },
         {
@@ -8,9 +11,6 @@
         },
         {
             "symptoms": [ "Botty burps", "CONSTANT SHOUTING", "Terrible moustache" ]
-        },
-        {
-            "symptoms": [ "Horns", "Short legs" ]
         },
         {
             "symptoms": [ "Short legs", "Duck noises", "Laser eyes"]

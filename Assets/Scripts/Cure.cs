@@ -88,12 +88,6 @@ namespace LD36
                         if (!usedIngredients.Contains(c)) usedIngredients.Add(c);
                         Debug.Log("Correct ingredient: " + c.name + " for symptom: " + s.name);
                     }
-                    // Missing ingredient
-                    else
-                    {
-                        total -= 50;
-                        Debug.Log("Missing ingredient: " + c.name + " for symptom: " + s.name);
-                    }
                 }
             }
 
@@ -111,19 +105,19 @@ namespace LD36
             // Check heated
             foreach (var h in heated)
             {
-                total += (50 * h.heat);
+                total += (25 * h.heat);
             }
 
             // Check stirred
             foreach (var s in stirred)
             {
-                total += (50 * s.stir); 
+                total += (25 * s.stir); 
             }
 
             // Check crushed
             foreach (var c in crushed)
             {
-                total += (50 * c.crush); 
+                total += (25 * c.crush); 
             }
 
             // Check order

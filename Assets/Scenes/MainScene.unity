@@ -463,8 +463,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You'll score points for each correct cure made but be careful, points are
-    lost for incorrect or missing ingredients and for missing vital steps!
+  m_Text: 'You''ll score points for each correct cure made but be careful, points
+    are lost for incorrect or missing ingredients and for missing vital steps!
+
+
+    Make sure you''re 100% certain before adding an ingredient to your mix as once
+    something is in the bowl there''s no going back!'
 --- !u!222 &241448601
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2740,8 +2744,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Wecome to the apothecary, use your chemistry knowledge (or the symtom reference
-    book) to cook up cures for your patients.
+  m_Text: Welcome to the apothecary, use your knowledge of ancient medicine (or the
+    symptom reference book) to cook up cures for your patients.
 --- !u!222 &1324948603
 CanvasRenderer:
   m_ObjectHideFlags: 0

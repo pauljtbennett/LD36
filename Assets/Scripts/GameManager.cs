@@ -80,6 +80,8 @@ namespace LD36
                     // Do some scoring
                     foreach (var cure in cures)
                     {
+                        if (cure == currentCure) continue;
+                        
                         float score = cure.CalculateEffectiveness();
                         if (score == float.NegativeInfinity)
                         {

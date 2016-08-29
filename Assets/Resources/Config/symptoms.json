@@ -2,7 +2,7 @@
     "symptoms": [
         {
             "name": "Duck noises",
-            "notes": "Quack quack! Treated by tangling a string of fairy lights with the human hair of a punk.",
+            "notes": "Quack quack! Treated with a tangled string of fairy lights or the human hair of a punk.",
             "curedBy": [ "Fairy lights", "Human hair (mohican)" ]
         },
         {
@@ -62,8 +62,8 @@
         },
         {
             "name": "Walking backwards",
-            "notes": "No cure found.",
-            "curedBy": []
+            "notes": "Rub donkey poop into the feet for an effecive cure.",
+            "curedBy": [ "Donkey poop" ]
         },
         {
             "name": "Green hair",
@@ -77,8 +77,8 @@
         },
         {
             "name": "On fire",
-            "notes": "Get a fire extinguisher I guess...",
-            "curedBy": []
+            "notes": "Cured by the loving embrace only a mother can provide.",
+            "curedBy": [ "Cuddles off your mum" ]
         }
     ]
 }

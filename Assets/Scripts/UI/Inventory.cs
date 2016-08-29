@@ -9,6 +9,7 @@ namespace LD36.UI
 {
     public class Inventory : MonoBehaviour
     {
+        public ScrollRect scroller;
         public GameObject contentScroller;
         public GameObject buttonPrefab;
 
@@ -66,6 +67,18 @@ namespace LD36.UI
         public void IngredientSelected(Ingredient ingredient)
         {
             GameManager.instance.AddIngredientToCure(ingredient);
+        }
+
+        public void ScrollLeft()
+        {
+            float scrollPos = Mathf.Clamp(scroller.horizontalNormalizedPosition - 0.1f, 0f, 1f);
+            scroller.horizontalNormalizedPosition = scrollPos;
+        }
+
+        public void ScrollRight()
+        {
+            float scrollPos = Mathf.Clamp(scroller.horizontalNormalizedPosition + 0.1f, 0f, 1f);
+            scroller.horizontalNormalizedPosition = scrollPos;
         }
     }
 }

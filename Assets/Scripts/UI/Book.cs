@@ -55,6 +55,7 @@ namespace LD36.UI
 
         public void NextPage()
         {
+            if (currentPage >= Mathf.CeilToInt((float)Symptoms.instance.GetAllConfigs().Count / (float)perPage) - 1) return;
             currentPage++;
             ShowPage();
         }

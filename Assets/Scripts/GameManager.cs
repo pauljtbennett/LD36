@@ -81,7 +81,7 @@ namespace LD36
                     foreach (var cure in cures)
                     {
                         if (cure == currentCure) continue;
-                        
+
                         float score = cure.CalculateEffectiveness();
                         if (score == float.NegativeInfinity)
                         {
@@ -191,6 +191,11 @@ namespace LD36
             yield return new WaitForSeconds(delay);
             lastScenario = currentScenario;
             currentScenario = null;
+        }
+
+        public void Quit()
+        {
+            Application.Quit();    
         }
     }
 }
